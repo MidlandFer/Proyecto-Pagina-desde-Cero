@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+/* declarando fuente de Texto*/
+
+:root{
+    --celeste:#9caebf;
+    --gris:#181f2a;
+    --sky-blue: #87CEFA;
+    --steel-blue: #4682B4;
+    
+    --degradado:linear-gradient(90deg, var(--celeste),var(--gris));
+    }
+/*funciones declarando colores*/
+ 
+*::selection {
+
+    background: var(--celeste);
+    color: white;
+}
+/*definiendo color con pseudo elemento*/
+
+html {
+    font-size: 80%;
+    overflow:auto;
+}
+/*definiendo etiqueta general*/
+body{
+
+background: whitesmoke;
+
+/*definiendo color de fondo*/
+
+section {
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5 rem;
+    padding-bottom: 2rem;
+
+}
+
+}
+
+header{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #9caebf;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+    padding: 0.1rem 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+/*posicionando, alineando y dando sombra a elelmentos del menú principal*/
+
+/*
+header .logo{
+    font-size: 3rem;
+    color: var(--sky-blue);
+
+    }
+definiendo color con pseudo elemento y tamaño de fuente en el LOGO*/    
+
+header .logo span{
+    color: var(--celeste);
+
+}
+/*definiendo color del menú con variable*/
+
+header.navbar a{
+    font-size: 3rem;
+    margin: 1.8rem 0;
+    color: var(--celeste);
+}
+/*definiendo tamaño de fuente, posicionamiento y color de barra de navegación en etiquetas de enlace*/
+
+header .navbar a:hover{
+    color: var(--steel-blue);
+
+}
+/*creando efecto de selección en menú*/
+
+header input{
+    display: none;
+}
+/*desapareciendo el recuadro de check box*/
+
+header label{
+    font-size: 2rem;
+    color: var(--gris);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+/* definiendo tamaño, color con variable, visibilidad y función del cursor */
+.inicio {
+display: flex;
+align-items: center;
+justify-content: center;
+background: url(../imagenes\Teclado-pc-1.png) no-repeat;
+background-size: cover;
+background-position: initial;
+
+
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 80%;
+    }
+}
+ /*definiendo menú responsiv, adaptando a PC escritorio*/
+
+@media (max-width: 768px) {
+    header label {
+        visibility: visible;
+        opacity: 1;
+    }
+/*definiendo menú responsiv, adaptando a Tablet*/
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: 0.2s linear;
+
+    }
+/*definiendo opciones de menú responsiv, adaptando a Tablet*/
+
+    header .navbar a{
+    display: block;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+/* definiendo selector y ordenando en bloque etiquetas de enlace*/
+
+    header input:checked ~ .navbar{
+    transform: scaleY(1);
+    opacity: 1;
+    }
+/*combinación de check box con barra de navegación en Tablet*/
+
+    header input:checked ~ label::before{
+        content: '\f00d' ;
+    }
+ /*combinación de check box con psudo elemento, se agraga signo X*/
+}
+
+@media(max-width:450px){
+    html {
+        font-size: 49%;
+
+    }
+}
+/*definiendo opciones de menú responsiv, adaptando a Móviles*/
+
+*{
+
+    font-family: sans-serif;
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+}
+/*Configuración general*/
+
+.inicio {
+
+    margin-top: 150px;
+    margin-left: 10px;
+
+}
+
+.inicio .content {
+   
+    width: auto;
+    top: 0;
+    left: 0;
+    
+}
+
+    font-size: 20px;
+    
+    
+
+.content{
+
+    width: 800px;
+    height: auto;
+}
+  */  
+
+
+div.content {
+
+width: 800px;
+height: auto;
+
+
+
+
+ img .teclado{
+    
+    height: 100%;
+    max-width: auto;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 500px;
+    box-sizing: border-box;
+    
+}
+
+h3 {
+    margin-bottom: 50px;
+   
+}
+
+button {
+
+    color: var(--degradado) ;
+    position: static;
+    z-index: 1000;
+
+}
